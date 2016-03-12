@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>greenishsea Portfolio</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" href="css/base.css" media="screen" title="no title" charset="utf-8">
+
+    <link rel="stylesheet" href="css/common.css" media="screen" title="no title" charset="utf-8">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+      <a class="toTop"  style="display:block;width:100px;height:100px;position:fixed;right:10px;bottom:10px;background-color:#000;z-index:999999;"href="#"></a>
+
+      <div class="wrapper">
+          <section id="scene1" class="header" style="height:1000px;">
+              <p class="c_catch">I develop a scene<br>for y<span class="u_circle u_circle__c u_pink u_hiddentext"   data-10="background-color:rgb(242,142,151);transform:scale(1);opacity:0.9;"
+              data-500="background-color:rgb(000,000,000);transform:scale(70);opacity:1.0;">o</span>u!</p>
+
+          </section>
+
+          <section id="scene2" class=""
+          data-3500="background:linear-gradient(left, rgb(0,0,0), rgb(0,0,0));"
+          data-5000="background:linear-gradient(left, rgb(0,210,255), rgb(58,123,213));"
+          >
+
+　          <figure class="flickerlight"
+            data-500="color:rgb(0,0,0);opacity:0;"
+            data-1000="color:rgb(255,255,255);opacity:1.0;"
+            data-5000="opacity:1.0;"
+            data-5500="opacity:0;"></figure>
+
+
+            <div class="message u_fixedtext_top"
+            data-500="color:rgb(0,0,0);opacity:0;"
+            data-700="color:rgb(255,255,255);opacity:1.0;" data-1400="color:rgb(255,255,255);opacity:1.0;" data-1600="color:rgb(0,0,0);opacity:0;">
+                <h2 class="c_headingLeft">about:</h2>
+                <p class="c_normalText">Hi, there!<br>I'm greenishsea. <br>Web developer and something.</p>
+            </div>
+
+
+            <div class="message u_fixedtext_top"
+            data-1600="color:rgb(0,0,0);opacity:0;"
+            data-1800="color:rgb(255,255,255);opacity:1.0;" data-2500="color:rgb(255,255,255);opacity:1.0;" data-2700="color:rgb(0,0,0);opacity:0;">
+                <h2 class="c_headingLeft">skills:</h2>
+                <p class="c_normalText">HTML5, CSS3, javascript and some server stuff like Java, PHP.</p>
+            </div>
+
+            <div class="message u_fixedtext_top"
+            data-2700="color:rgb(0,0,0);opacity:0;"
+            data-2900="color:rgb(255,255,255);opacity:1.0;" data-3600="color:rgb(255,255,255);opacity:1.0;" data-3800="color:rgb(0,0,0);opacity:0;">
+                <h2 class="c_headingLeft">concern:</h2>
+                <p class="c_normalText">Immersion!<br> Imerged in scenery, sports, TV Drama ... and life itself.<br></p>
+            </div>
+
+
+            <div class="message u_fixedtext_middle c_normalText_2"
+            data-3800="color:rgb(0,0,0);opacity:0;"
+            data-4000="color:rgb(255,255,255);opacity:1.0;" data-4700="color:rgb(255,255,255);opacity:1.0;" data-4900="color:rgb(0,0,0);opacity:0;">
+                <h2></h2>
+                <p>Throwing any kind of new immersion stuff in Web...<br>that is my fate (^_-)</p>
+            </div>
+
+
+            <div class="u_fixedtext_top u_circle u_circle__c u_goldglow"
+            data-3400="background-color:rgb(0,0,0);opacity:0;box-shadow:0 0 50px rgb(0,0,0),0 0 150px rgb(0,0,0);"
+            data-3600="background-color:rgb(255,223,0);opacity:1.0;" data-3800="transform:translate(0px);" data-4300="background-color:rgb(245,245,245);box-shadow:0 0 50px rgb(255,215,0),0 0 150px rgb(255,215,0);transform:translate(300px)">
+                <p style="text-align:center;opacity:0;">WORKS</p>
+            </div>
+
+            <div class="works u_fixedtext_bottom"
+            data-5400="color:rgb(0,0,0);opacity:0;"
+            data-5900="color:rgb(255,255,255);opacity:1.0;"
+            >
+              <img src="http://placehold.it/200x200"/>
+              <img src="http://placehold.it/200x200"/>
+              <img src="http://placehold.it/200x200"/>
+            </div>
+
+          </section>
+
+      </div>
+
+
+  <script src="js/lib/skrollr.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+      var s = skrollr.init();
+  </script>
+  <script>
+
+
+  //about toTop link
+    $('a[href^="#"]').click(function(){
+      var speed = 1200;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $("html, body").animate({scrollTop:position}, speed, "swing");
+      return false;
+    });
+
+
+
+      var limit=80, // Max number of flickers
+      // body=document.body;
+
+      body = document.getElementById("scene2");
+
+      loop={
+       //initilizeing
+       start:function(){
+        for (var i=0; i <= limit; i++) {
+         var flicker=this.newFlicker();
+         flicker.style.top=this.rand()*100+"%";
+         flicker.style.left=this.rand()*100+"%";
+         flicker.style.webkitAnimationDelay=this.rand()+"s";
+         flicker.style.mozAnimationDelay=this.rand()+"s";
+         body.appendChild(flicker);
+        };
+       },
+       //to get random number
+       rand:function(){
+        return Math.random();
+       },
+       //createing html dom for flicker
+       newFlicker:function(){
+        var d = document.createElement('div');
+        d.innerHTML = '<figure class="flickerlight"></figure>';
+         return d.firstChild;
+       },
+      };
+      loop.start();
+
+  </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+
+  </body>
+</html>

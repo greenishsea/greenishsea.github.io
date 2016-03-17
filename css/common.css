@@ -7,6 +7,7 @@ body {
   text-align: center;
   font-size: 1.4em;
   font-family: 'Varela Round', sans-serif;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -159,10 +160,25 @@ body {
     justify-content: center;
 }
 
-img {
+.imgCircle {
     margin: 10px 100px;
     border-radius: 100%;
 }
+
+.c_circleContent {
+  width: 250px;
+  height: 250px;
+    vertical-align: middle;
+    margin: 10px 100px;
+    border-radius: 100%;
+    background-color: lightgray;
+    color: gray;
+    display: table-cell;
+
+}
+
+
+
 
 
 /* lib */
@@ -235,7 +251,7 @@ img {
       /*flex-direction: column;*/
     }
 
-    .works img {
+    .works .imgCircle {
         margin: 10px 30px;
     }
 }

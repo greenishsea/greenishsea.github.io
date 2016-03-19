@@ -99,7 +99,7 @@ body {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 5%;
-    line-height: 5rem;
+    line-height: 5.3rem;
 }
 
 
@@ -134,15 +134,6 @@ body {
     margin-right: 6px;
 }
 
-.i_sankaku{
-	width: 0px;
-	height: 0px;
-	border-top: 40px solid #fff;
-	border-right: 40px solid transparent;
-	border-bottom: 40px solid transparent;
-	border-left: 40px solid transparent;
-}
-
 #scene1 {
     background: #02AAB0; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #02AAB0 , #00CDAC); /* Chrome 10-25, Safari 5.1-6 */
@@ -164,19 +155,19 @@ body {
   width: 300px;
   height: 300px;
     margin: 10px 100px;
-    border-radius: 100%;
+    /*border-radius: 100%;*/
     display: table;
+    border: 1px solid lightgray;
+    background-color: lightgray;
+    border-radius: 50%;
+    opacity: 0.9;
 }
 
 .c_circleContent {
-    vertical-align: middle;
-    /*margin: 10px 100px;
-    border-radius: 100%;*/
-    background-color: lightgray;
     color: gray;
-    display: table-cell;
+    opacity: 1;
     font-size: 3rem;
-
+    padding-top: 32%;
 }
 
 

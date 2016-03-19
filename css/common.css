@@ -98,7 +98,7 @@ body {
     text-align: left;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 10%;
+    margin-top: 5%;
     line-height: 5rem;
 }
 
@@ -198,6 +198,8 @@ body {
           border: 16px solid transparent;
           border-top-color: #FFF;
           margin-top: 30px;
+          margin-left: auto;
+          margin-right: auto;
       }
 
       #scroll_attention .down_arrow:after {
@@ -261,8 +263,9 @@ body {
 
 
 
-@media only screen and (max-width : 480px) {
-    .mainword {
+/*@media only screen and (max-width : 480px) {*/
+@media only screen and (max-width : 880px) {
+    /*.mainword {
         font-size: 0.5rem;
         letter-spacing: 0.6rem;
     }
@@ -277,14 +280,22 @@ body {
       font-size: 2.5rem;
       letter-spacing: 0.3rem;
       line-height: 4rem;
-    }
+    }*/
 
     .works {
-      display: block;
-      /*flex-direction: column;*/
+      /*display: block;*/
+              /*margin-top: 60px;*/
+      flex-direction: column;
     }
 
     .works .imgCircle {
-        margin: 10px 30px;
+        margin-top: 100px;
+        /*margin-bottom: 30px;*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .u_fixedtext_bottom {
+        bottom: 10%;
     }
 }

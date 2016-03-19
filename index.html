@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"> -->
     <title>greenishsea's intro site</title>
@@ -100,7 +101,7 @@
             <div class="u_fixedtext_top u_circle u_circle__c u_goldglow"
             data-3400="background-color:rgb(0,0,0);opacity:0;box-shadow:0 0 50px rgb(0,0,0),0 0 150px rgb(0,0,0);"
             data-3600="background-color:rgb(255,223,0);opacity:1.0;"
-            data-3800="transform:translate(0px);" data-4300="background-color:rgb(245,245,245);box-shadow:0 0 50px rgb(255,215,0),0 0 150px rgb(255,215,0);transform:translate(270px)">
+            data-3800="transform:translate(0px);" data-4300="background-color:rgb(245,245,245);box-shadow:0 0 50px rgb(255,215,0),0 0 150px rgb(255,215,0);transform:translate(150px)">
                 <p style="text-align:center;opacity:1;font-size:3rem;text-indent:2rem;color:gray;position: relative; top: 2px; right: 75px;"
                 data-5400="opacity:0;"
                 data-5900="opacity:1.0;">WORKS</p>
@@ -111,8 +112,8 @@
             data-5900="color:rgb(255,255,255);opacity:1.0;"
             >
               <img class="imgCircle" src="http://placehold.it/250x250"/>
-              <!-- <img class="imgCircle" src="http://placehold.it/250x250"/> -->
-              <div class="imgCircle" ><span class="c_circleContent" src="http://placehold.it/250x250">more is<br>coming!</span></div>
+              <img class="imgCircle" src="http://placehold.it/250x250"/>
+              <!-- <div class="imgCircle" ><span class="c_circleContent" src="http://placehold.it/250x250">more is<br>coming!</span></div> -->
             </div>
 
           </section>
@@ -129,30 +130,57 @@
 
 
   //about toTop link
-    $('a[href^="#"]').on('click touchstart', function(){
-      var speed = 1200;
-      var href= $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      // $("html, body").animate({scrollTop:position}, speed, "swing");
-      // $("html, body").animate({scrollTop:0}, speed, "swing");
-      // $('body').animate({ scrollTo: 0; });
-      // $(".wrapper").animate({scrollTop:0}, speed, "swing");
-      // return false;
+    // $('a[href^="#"]').on('click touchstart', function(){
+    //   var speed = 1200;
+    //   var href= $(this).attr("href");
+    //   var target = $(href == "#" || href == "" ? 'html' : href);
+    //   var position = target.offset().top;
+    //   // $("html, body").animate({scrollTop:position}, speed, "swing");
+    //   // $("html, body").animate({scrollTop:0}, speed, "swing");
+    //   // $('body').animate({ scrollTo: 0; });
+    //   // $(".wrapper").animate({scrollTop:0}, speed, "swing");
+    //   // return false;
+    //
+    //   if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+    //         // window.scrollTo(0,3000) // first value for left offset, second value for top offset
+    //   }else{
+    //         $('html,body').animate({
+    //             // scrollTop: 100,
+    //             // scrollLeft: 200
+    //             scrollTop: 0,
+    //             scrollLeft: 0
+    //         }, 800, function(){
+    //             $('html,body').clearQueue();
+    //         });
+    //   }
+    // });
 
-      if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
-            // window.scrollTo(0,3000) // first value for left offset, second value for top offset
-      }else{
-            $('html,body').animate({
-                // scrollTop: 100,
-                // scrollLeft: 200
-                scrollTop: 0,
-                scrollLeft: 0
-            }, 800, function(){
-                $('html,body').clearQueue();
-            });
-      }
-    });
+    var $anchor = $('a[href^="#"]');
+
+    if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+          $anchor.hide();
+    }else{
+       $anchor.on('click touchstart', function(){
+        var speed = 1200;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+
+
+              $('html,body').animate({
+                  // scrollTop: 100,
+                  // scrollLeft: 200
+                  scrollTop: 0,
+                  scrollLeft: 0
+              }, 800, function(){
+                  $('html,body').clearQueue();
+              });
+      });
+    }
+
+
+
+
 
     // $(function(){
     //     var $a = $('a[href^="#"]');

@@ -161,19 +161,21 @@ body {
 }
 
 .imgCircle {
+  width: 250px;
+  height: 250px;
     margin: 10px 100px;
     border-radius: 100%;
+    display: table;
 }
 
 .c_circleContent {
-  width: 250px;
-  height: 250px;
     vertical-align: middle;
-    margin: 10px 100px;
-    border-radius: 100%;
+    /*margin: 10px 100px;
+    border-radius: 100%;*/
     background-color: lightgray;
     color: gray;
     display: table-cell;
+    font-size: 3rem;
 
 }
 
@@ -202,7 +204,7 @@ body {
     -o-animation: flicker 4.5s linear 0s infinite normal;
 }
 
-/*CSS3 keyframes for twinkling effect*/
+/*CSS3 keyframes for flickering effect*/
 @-webkit-keyframes flicker {
  0%   { -webkit-transform: scale(1.0); opacity: 1; }
  25%  { -webkit-transform: scale(0.5); opacity: 0; }

@@ -112,6 +112,27 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+
+    /* [todo] need to modify the right scale usage for Safari */
+    /*width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    margin: -965px;
+    transform: scale(0.025);*/
+}
+
+.u_circle_c_firstCircle {
+    /*width: 50px;
+    height: 50px;
+    border-radius: 50%;*/
+
+    /* [todo] need to modify the right scale usage for Safari */
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    margin: -965px;
+    margin-right: -960px; /* adjuster */
+    transform: scale(0.025);
 }
 
 .u_pink {
@@ -132,7 +153,7 @@ body {
     vertical-align: middle;
 }
 
-#scene1 {
+#top {
     background: #02AAB0; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #02AAB0 , #00CDAC); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to left, #02AAB0 , #00CDAC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -140,7 +161,8 @@ body {
 
 #scene2 {
     position:relative;
-    height:8500px; /* if you eliminate this height, you get horizontal flikers. */
+    height:8500px;
+    /*height: 22px;*/
 }
 
 
@@ -167,8 +189,6 @@ body {
     font-size: 3rem;
     padding-top: 32%;
 }
-
-
 
 
 
@@ -215,11 +235,22 @@ body {
     bottom:10px;
     border: 3px solid #FFF;
         border-radius: 10%;
-    background-color:gray;
+    background-color:#00CDAC;
     z-index:999999;
+    cursor: none;
+    opacity: 0.7;
+}
+
+.toTop:hover {
+    opacity: 1 !important;
     cursor: pointer;
 }
 
+.toTop[style*="opacity: 0;"],
+.toTop[style*="opacity: 0;"]:hover {
+    display:none;
+    cursor: none;
+}
 
 .toTop .upper_arrow {
     position: relative;
@@ -231,7 +262,7 @@ body {
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.5;
+    /*opacity: 0.5;*/
 }
 
 .toTop .upper_arrow:after {
@@ -243,11 +274,6 @@ body {
     height: 16px;
     background: #FFF;
 }
-
-.toTop:hover {
-    opacity: 1 !important;
-}
-
 
 /* lib */
 

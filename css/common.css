@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+html {
+  font-style: 62.5%;
+}
+  
 body {
   -webkit-background-size: cover;
   background-size: cover;
@@ -169,6 +173,7 @@ body {
 .works {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .imgCircle {
@@ -177,14 +182,13 @@ body {
     margin: 10px 100px;
     /*border-radius: 100%;*/
     display: table;
-    border: 1px solid lightgray;
-    background-color: lightgray;
+    border: 2px solid #fff;
     border-radius: 50%;
     opacity: 0.9;
 }
 
 .c_circleContent {
-    color: gray;
+    color: #fff;
     opacity: 1;
     font-size: 3rem;
     padding-top: 32%;

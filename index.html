@@ -125,8 +125,6 @@
 
     <script src="js/lib/skrollr.js"></script>
     <script>
-      $('body').delay(400).fadeIn("slow");
-
       var s = skrollr.init();
       
       var $anchor = $('#toTop');
@@ -170,6 +168,8 @@
         },
       };
       loop.start();
+
+      $('body').delay(400).fadeIn("slow");
     </script>
   </body>
 </html>

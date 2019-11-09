@@ -31,6 +31,10 @@
     </script>
   </head>
   <body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+      $('body').hide();
+    </script>
     <div class="scrollIndicator"
       data-0="opacity:1;"
       data-200="opacity:0;">
@@ -120,11 +124,8 @@
     </div>
 
     <script src="js/lib/skrollr.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
-      const $body = $('body');
-      $body.hide();
-      $body.delay(400).fadeIn("slow");
+      $('body').delay(400).fadeIn("slow");
 
       var s = skrollr.init();
       
